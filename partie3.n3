@@ -1,0 +1,22 @@
+http://dbpedia.org/
+http://dbpedia.org/ontology/longName
+http://dbpedia.org/ontology/foundingDate
+
+1.
+select ?pays ?o where {
+?pays dbp:populationCensus ?o.
+?pays dbo:longName ?name.
+FILTER(?o > 15000000).
+FILTER ( lang(?name) = "en") 
+}
+
+2.
+SELECT ?pays ?name WHERE {
+?pays dbo:longName ?name.
+?pays dbo:foundingDate ?date.
+FILTER ( lang(?name) = "en"). 
+FILTER ( regex(?name,"Republic") ).
+FILTER ( date > "1920" )
+}
+
+

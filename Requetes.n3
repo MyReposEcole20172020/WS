@@ -1,0 +1,14 @@
+ASK WHERE {	
+dbr:Lucy_Westenra dbo:occupation dbr:Vampire
+}
+
+dbr:Vampire dbp:similarCreatures ?c
+dbr:Vampire dbp:similarCreatures ?species
+
+
+?s http://dbpedia.org/ontology/nonFictionSubject dbr:Vampire
+?s http://dbpedia.org/ontology/species dbr:Vampire
+?c http://dbpedia.org/property/aux dbr:Vampire
+
+dbr:Vampire dbp:similarCreatures ?c (Bidirectionel)
+	http://dbpedia.org/property/similarCreatures
